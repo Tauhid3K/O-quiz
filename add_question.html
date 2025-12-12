@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Question</title>
+</head>
+<body>
+
+<h2>Add Question</h2>
+
+<form action="backend/add_question.php" method="POST">
+
+    <input type="hidden" name="quiz_id"
+           value="<?php echo $_GET['quiz_id']; ?>">
+
+    <textarea name="question" placeholder="Question text" required></textarea>
+
+    <select name="type">
+        <option value="mcq">MCQ</option>
+        <option value="truefalse">True/False</option>
+        <option value="short">Short Answer</option>
+    </select>
+
+    <input type="text" name="option1" placeholder="Option 1 (MCQ only)">
+    <input type="text" name="option2" placeholder="Option 2">
+    <input type="text" name="option3" placeholder="Option 3">
+    <input type="text" name="option4" placeholder="Option 4">
+
+    <input type="text" name="answer" placeholder="Correct Answer" required>
+
+    <button type="submit">Add</button>
+
+</form>
+
+</body>
+</html>

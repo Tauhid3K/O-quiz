@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register | O'Quiz</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="lrstyle.css">
+</head>
+<body>
+
+  <!--Navigation -->
+  <div class="nav">
+    <h1 class="logo">O'Quiz</h1>
+    <div class="nav_links">
+      <a href="index.html">Home</a>
+      <a href="login.html">Login</a>
+      <a href="register.html">Register</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>    
+  </div>
+
+  <!-- Registration Section -->
+  <section class="auth-section">
+    <div>
+      <h2>Register</h2>
+      <form action="register.php" method="post">
+        <input type="text" name="fullname" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+        <button type="submit" class="btn btn-primary">Register</button>
+      </form>
+      <p>Already have an account? <a href="login.html">Login</a></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 O’Quiz | Designed by Tauhid</p>
+  </footer>
+</body>
+</html>

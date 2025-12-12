@@ -1,0 +1,221 @@
+body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #3f51b5, #2196f3);
+    height: 100vh;
+    color: #333;
+}
+/*Nevigation panel*/
+.nav{
+    display: flex;
+    background-color: #1b3953;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px;
+    height: 60px;
+    position: relative;
+
+}
+.logo{
+    display: flex;
+    color: aqua;
+    font-weight: bolder;
+    font-size: 2.4rem;
+    margin-right: 120px;
+}
+
+.nav_links a{
+    color: white;
+    margin-left: 40px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.nav_links a:hover{
+    color: #ffcc00;
+}
+
+/*Section 01*/
+.hero{
+    display: flex;
+    text-align: center;
+    color: white;
+    padding: 70px 20px;
+    justify-content: center;
+}
+
+.hero-content {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.hero-content h1{
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+}
+/*section 02*/
+.hero1{
+    text-align: center;
+    color: white;
+    padding: 30px 20px;
+    justify-content: center;
+}
+
+.hero-content1 {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+.hero-content1 h1{
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.hero-buttons .btn{
+    padding: 10px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0, 10px;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease ;
+}
+
+/*Buttons*/
+.btn-primary {
+  background-color: yellow; 
+  color: #1b3953;
+}
+
+.btn-primary:hover {
+  background-color: #e6b800;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #ffcc00;
+  border: 2px solid #ffcc00;
+}
+
+.btn-secondary:hover {
+  background-color: yellow;
+  color: #1b3953;
+}
+
+/*Feature Section */
+.features {
+  text-align: center;
+  padding: 30px 20px;
+  color: white;
+}
+
+.features h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.feature-box p {
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+footer {
+  text-align: center;
+  background-color: #1b3953;
+  color: white;
+  padding: 15px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/*for mobile device*/
+@media (max-width: 768px){
+    .nav{
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav_links a{
+        margin: 10px 0;
+    }
+
+    .hero-content h1{
+        font-size: 2rem;
+    }
+    .hero-content p{
+        font-size: 1rem;
+    }
+    .hero-content1 h1{
+        font-size: 1.5rem;
+    }
+}
+
+/* -------------------- Dashboard Section -------------------- */
+.dashboard {
+    max-width: 900px;
+    margin: 100px auto 50px;
+    background-color: rgba(0,0,0,0.3); /* semi-transparent dark overlay */
+    padding: 30px;
+    border-radius: 10px;
+    color: white; /* main text white */
+}
+
+.dashboard h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.dashboard p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.dashboard ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.dashboard ul li {
+    margin-bottom: 10px;
+}
+
+.dashboard ul li a {
+    text-decoration: none;
+    color: white; /* quiz links white */
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.dashboard ul li a:hover {
+    color: #ffcc00; /* hover yellow */
+    text-decoration: underline;
+}
+
+/* Buttons inside dashboard (optional) */
+.dashboard a.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 20px;
+    background-color: #2196f3;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.dashboard a.btn:hover {
+    background-color: #1b3953;
+    color: #ffcc00;
+}
+
+/* Footer adjustment for dashboard */
+footer {
+    margin-top: 30px; /* push footer below content */
+    position: relative; /* remove fixed positioning */
+}
