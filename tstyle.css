@@ -1,0 +1,151 @@
+/* =============================
+   MAIN CONTAINER
+   ============================= */
+.quiz-container {
+    max-width: 800px;
+    margin: 30px auto 0; /* removed bottom margin to eliminate space above footer */
+    padding: 20px;
+    background-color: #0f2a42;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.quiz-form h2 {
+    text-align: center;
+    color: #ffd700;
+    margin-bottom: 25px;
+    font-size: 2rem;
+}
+
+/* =============================
+   TIMER
+   ============================= */
+#timer {
+    text-align: center;
+    font-weight: bold;
+    color: #ffcc00;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+/* =============================
+   QUESTIONS
+   ============================= */
+.question-item {
+    background-color: #e0f0ff; /* light blue */
+    color: #1b3953; /* dark text for contrast */
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.question-item p {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+/* =============================
+   OPTIONS
+   ============================= */
+.options label {
+    display: block;
+    margin: 8px 0;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 5px;
+    background-color: #f5faff; /* slightly lighter than question box */
+    color: #1b3953; /* dark text */
+    transition: background 0.3s, transform 0.2s;
+    border: 1px solid #c0d4e0;
+}
+
+.options label:hover {
+    background-color: #d0e4ff;
+    transform: scale(1.02);
+}
+
+.options input[type="radio"] {
+    margin-right: 10px;
+}
+
+/* =============================
+   SUBMIT BUTTON
+   ============================= */
+button[type="submit"] {
+    display: block;
+    margin: 20px auto 0;
+    padding: 12px 25px;
+    background-color: #ffd700;
+    color: #1b3953;
+    font-weight: bold;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #e6c200;
+}
+
+/* =============================
+   FOOTER
+   ============================= */
+footer {
+    background-color: #1b3953;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+}
+
+footer p {
+    margin: 0; /* IMPORTANT */
+}
+
+
+/* =============================
+   MATHJAX ADJUSTMENT
+   ============================= */
+.mathjax {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+/* =============================
+   FULL HEIGHT FIX
+   ============================= */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #0f2a42; /* keeps your quiz container background */
+    flex: 1;
+}
+
+main {
+    flex: 1; /* makes main expand so footer sticks at bottom */
+    padding-bottom: 0;
+}
+
+/* =============================
+   PROFILE FORM STYLING
+   ============================= */
+.profile-info p,
+.quiz-form label {
+    color: black; /* make text black */
+    font-weight: bold;
+}
+
+.quiz-form input[type="text"],
+.quiz-form input[type="email"] {
+    background-color: #f5faff; /* light input background */
+    color: #1b3953; /* dark text inside input */
+}

@@ -1,0 +1,60 @@
+/* =============================
+   FULL HEIGHT FIX
+   ============================= */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #0f2a42; /* keeps your quiz container background */
+    flex: 1;
+}
+
+main {
+    flex: 1; /* makes main expand so footer sticks at bottom */
+    padding-bottom: 0;
+}/* =============================
+   PROFILE FORM STYLING
+   ============================= */
+
+   .profile-info p,
+.quiz-form label {
+    color: rgb(255, 255, 255); /* make text black */
+    font-weight: bold;
+}
+
+.quiz-form input[type="text"],
+.quiz-form input[type="email"] {
+    background-color: #f5faff; /* light input background */
+    color: #1b3953; /* dark text inside input */
+}
+
+.profile-container {
+    max-width: 800px;
+    margin: 30px auto 0; /* removed bottom margin to eliminate space above footer */
+    padding: 20px;
+    background-color: #0f2a42;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.profile-form h2 {
+    text-align: center;
+    color: #ffd700;
+    margin-bottom: 20px;
+}
+.profile-form h3 {
+    text-align: center;
+    color: #ffd700;
+    margin-bottom: 20px;
+}
+
+.profile-form label {
+    color: #ffffff;
+    margin-bottom: 10px;
+    display: block;
+}

@@ -1,31 +1,46 @@
-body{
+/* =============================
+   RESET
+   ============================= */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+/* =============================
+   GLOBAL
+   ============================= */
+body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #3f51b5, #2196f3);
-    height: 100vh;
-    color: #333;
+    display: flex;
+    flex-direction: column;
+    background-color: #1b3953;
 }
-/*Nevigation panel*/
-.nav{
+
+/* =============================
+   NAVIGATION PANEL
+   ============================= */
+.nav {
     display: flex;
     background-color: #1b3953;
     color: white;
     align-items: center;
     justify-content: center;
-    padding: 30px 20px;
+    padding: 20px;
     height: 60px;
-    position: relative;
-
 }
-.logo{
-    display: flex;
+
+.logo {
     color: aqua;
     font-weight: bolder;
     font-size: 2.4rem;
     margin-right: 120px;
 }
 
-.nav_links a{
+.nav_links a {
     color: white;
     margin-left: 40px;
     text-decoration: none;
@@ -33,189 +48,145 @@ body{
     font-size: 1.2rem;
 }
 
-.nav_links a:hover{
+.nav_links a:hover {
     color: #ffcc00;
 }
 
-/*Section 01*/
-.hero{
-    display: flex;
+/* =============================
+   MAIN CONTENT (FIXED)
+   ============================= */
+main {
+    flex: 1; /* THIS LINE FIXES EVERYTHING */
+    background: linear-gradient(135deg, #3f51b5, #2196f3);
+}
+
+/* =============================
+   HERO SECTION
+   ============================= */
+.hero {
     text-align: center;
     color: white;
-    padding: 70px 20px;
-    justify-content: center;
+    padding: 60px 20px;
 }
 
 .hero-content {
     font-size: 1.2rem;
-    margin-bottom: 10px;
 }
 
-.hero-content h1{
+.hero-content h1 {
     font-size: 2.8rem;
     margin-bottom: 20px;
 }
-/*section 02*/
-.hero1{
+
+/* =============================
+   SECOND HERO SECTION
+   ============================= */
+.hero1 {
     text-align: center;
     color: white;
-    padding: 30px 20px;
-    justify-content: center;
+    padding: 40px 20px;
 }
 
 .hero-content1 {
     font-size: 1.2rem;
-    margin-bottom: 40px;
 }
-.hero-content1 h1{
+
+.hero-content1 h1 {
     font-size: 2rem;
     margin-bottom: 20px;
 }
 
-.hero-buttons .btn{
+/* =============================
+   BUTTONS
+   ============================= */
+.hero-buttons .btn {
     padding: 10px 30px;
     font-size: 1rem;
     font-weight: bold;
-    margin: 0, 10px;
+    margin: 0 10px;
     border: none;
     border-radius: 4px;
     text-decoration: none;
-    transition: background-color 0.3s ease ;
+    transition: 0.3s;
 }
 
-/*Buttons*/
 .btn-primary {
-  background-color: yellow; 
-  color: #1b3953;
+    background-color: yellow;
+    color: #1b3953;
 }
 
 .btn-primary:hover {
-  background-color: #e6b800;
+    background-color: #e6b800;
 }
 
 .btn-secondary {
-  background-color: transparent;
-  color: #ffcc00;
-  border: 2px solid #ffcc00;
+    background-color: transparent;
+    color: #ffcc00;
+    border: 2px solid #ffcc00;
 }
 
 .btn-secondary:hover {
-  background-color: yellow;
-  color: #1b3953;
+    background-color: yellow;
+    color: #1b3953;
 }
 
-/*Feature Section */
+/* =============================
+   FEATURES
+   ============================= */
 .features {
-  text-align: center;
-  padding: 30px 20px;
-  color: white;
+    text-align: center;
+    padding: 40px 20px;
+    color: white;
 }
 
 .features h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
 
 .feature-box p {
-  margin: 10px 0;
-  font-size: 1rem;
+    margin: 10px 0;
+    font-size: 1rem;
 }
 
+/* =============================
+   FOOTER (FINAL FIX)
+   ============================= */
 footer {
-  text-align: center;
-  background-color: #1b3953;
-  color: white;
-  padding: 15px 0;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+    background-color: #1b3953;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
 }
 
-/*for mobile device*/
-@media (max-width: 768px){
-    .nav{
+footer p {
+    margin: 0; /* IMPORTANT */
+}
+
+/* =============================
+   RESPONSIVE
+   ============================= */
+@media (max-width: 768px) {
+    .nav {
         flex-direction: column;
-        text-align: center;
-    }
-    .nav_links a{
-        margin: 10px 0;
+        height: auto;
     }
 
-    .hero-content h1{
+    .logo {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .nav_links a {
+        margin: 10px;
+        display: inline-block;
+    }
+
+    .hero-content h1 {
         font-size: 2rem;
     }
-    .hero-content p{
-        font-size: 1rem;
-    }
-    .hero-content1 h1{
+
+    .hero-content1 h1 {
         font-size: 1.5rem;
     }
-}
-
-/* -------------------- Dashboard Section -------------------- */
-.dashboard {
-    max-width: 900px;
-    margin: 100px auto 50px;
-    background-color: rgba(0,0,0,0.3); /* semi-transparent dark overlay */
-    padding: 30px;
-    border-radius: 10px;
-    color: white; /* main text white */
-}
-
-.dashboard h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: white;
-}
-
-.dashboard p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-    color: white;
-}
-
-.dashboard ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-.dashboard ul li {
-    margin-bottom: 10px;
-}
-
-.dashboard ul li a {
-    text-decoration: none;
-    color: white; /* quiz links white */
-    font-weight: bold;
-    font-size: 1.1rem;
-    transition: color 0.3s ease;
-}
-
-.dashboard ul li a:hover {
-    color: #ffcc00; /* hover yellow */
-    text-decoration: underline;
-}
-
-/* Buttons inside dashboard (optional) */
-.dashboard a.btn {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 8px 20px;
-    background-color: #2196f3;
-    color: white;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: all 0.3s ease;
-}
-
-.dashboard a.btn:hover {
-    background-color: #1b3953;
-    color: #ffcc00;
-}
-
-/* Footer adjustment for dashboard */
-footer {
-    margin-top: 30px; /* push footer below content */
-    position: relative; /* remove fixed positioning */
 }

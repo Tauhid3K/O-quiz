@@ -1,0 +1,345 @@
+/* =============================
+   RESET
+   ============================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+/* =============================
+   GLOBAL
+   ============================= */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    background-color: #1b3953;
+    color: white;
+}
+
+/* =============================
+   NAVBAR
+   ============================= */
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    height: 60px;
+    background-color: #1b3953;
+}
+
+.logo {
+    color: aqua;
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin-right: 120px;
+}
+
+.nav_links a {
+    color: white;
+    margin-left: 40px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.nav_links a:hover {
+    color: #ffcc00;
+}
+
+/* =============================
+   MAIN CONTENT
+   ============================= */
+main {
+    flex: 1;
+    background: linear-gradient(135deg, #3f51b5, #2196f3);
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* =============================
+   QUIZ FORM CONTAINER
+   ============================= */
+.quiz-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.quiz-form {
+    width: 100%;
+    max-width: 900px;
+    padding: 30px;
+    background-color: rgba(0,0,0,0.7);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+.quiz-form h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #ffd700;
+}
+
+/* =============================
+   FORM GROUPS
+   ============================= */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 1px;
+}
+
+.quiz-form label {
+    display: block;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+/* =============================
+   INPUTS, TEXTAREAS, SELECTS
+   ============================= */
+.quiz-form input,
+.quiz-form textarea,
+.quiz-form select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    background-color: rgba(255,255,255,0.1);
+    color: white;
+    transition: 0.3s;
+}
+
+.quiz-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.quiz-form input:focus,
+.quiz-form textarea:focus,
+.quiz-form select:focus {
+    background-color: rgba(255,255,255,0.2);
+    color: rgb(255, 255, 255);
+}
+
+.quiz-form select:focus {
+    background-color: rgba(255,255,255,0.2);
+    color: #000000; /* black text after selection */
+}
+
+/* =============================
+   BUTTONS
+   ============================= */
+.quiz-form button {
+    margin-top: 15px;
+    padding: 12px;
+    background-color: #ffd700;
+    color: #1b3953;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.quiz-form button:hover {
+    background-color: #ffcc00;
+}
+
+/* =============================
+   QUIZ TABLES (Teacher / Student)
+   ============================= */
+.quiz-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    color: white;
+    background-color: rgba(0,0,0,0.6);
+    border-radius: 6px;
+    overflow: hidden;
+}
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+
+.quiz-table th,
+.quiz-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.quiz-table th {
+    background-color: #ffd700;
+    color: #1b3953;
+}
+
+.quiz-table tr:hover {
+    background-color: rgba(255,255,255,0.1);
+}
+.btn-start {
+    padding: 6px 12px;
+    background-color: #ffd700;
+    color: #1b3953;
+    font-weight: bold;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+.btn-start:hover {
+    background-color: #ffcc00;
+}
+.quiz-table a.btn-start {
+    color: #141346;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+
+/* ACTION LINKS */
+.quiz-table a {
+    color: #00ff00;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+.quiz-table a:hover {
+    text-decoration: underline;
+}
+
+/* INLINE EDIT FORMS IN TABLES */
+.quiz-table td form {
+    display: inline-flex;
+    gap: 5px;
+    align-items: center;
+}
+
+/* SPACING FOR ACTION INPUTS IN TABLE ACTIONS */
+.quiz-table td form input,
+.quiz-table td form button {
+    display: block;      /* stack them vertically */
+    margin-bottom: 8px;  /* space between fields */
+}
+
+/* =============================
+   ✅ TIME UPDATE FORM (FIXED)
+   ============================= */
+.my-quizzes-table td form {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Duration input */
+.my-quizzes-table td form input[type="number"] {
+    width: 90px;
+    padding: 6px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    text-align: center;
+}
+
+/* Update button */
+.my-quizzes-table td form button {
+    padding: 6px 12px;
+    background-color: #ffd700;
+    color: #1b3953;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.my-quizzes-table td form button:hover {
+    background-color: #ffcc00;
+}
+
+/* =============================
+   ACTION LINKS
+   ============================= */
+.my-quizzes-table a {
+    color: #00ff00;
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.my-quizzes-table a:hover {
+    text-decoration: underline;
+}
+/* =============================
+   QUESTION LIST - POINTS DISPLAY
+   ============================= */
+.question-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.question-item .points {
+    color: #ffd700;
+    font-weight: bold;
+}
+
+
+/* =============================
+   FOOTER
+   ============================= */
+footer {
+    background-color: #1b3953;
+    text-align: center;
+    padding: 15px 0;
+}
+
+/* =============================
+   RESPONSIVE
+   ============================= */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .logo {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .nav_links a {
+        margin: 10px;
+    }
+
+    .quiz-form {
+        padding: 20px;
+    }
+
+    .quiz-table td form {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .quiz-table th,
+    .quiz-table td {
+        font-size: 0.9rem;
+    }
+}

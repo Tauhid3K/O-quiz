@@ -57,3 +57,23 @@
 .auth-section a:hover {
   text-decoration: underline;
 }
+
+
+/* Error & Success Messages */
+
+.auth-section .error-message {
+  color: #ff4d4d;
+  text-align: center;
+  margin-bottom: 12px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.auth-section .success-message {
+  color: #4caf50;
+  text-align: center;`
+  margin-bottom: 12px;
+  font-size: 15px;
+  font-weight: bold;
+}
+

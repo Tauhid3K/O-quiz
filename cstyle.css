@@ -33,5 +33,28 @@
 .hero-content2 a:hover {
     text-decoration: underline;
 }
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
 
+main {
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    .hero-content2 {
+        padding: 20px;
+    }
+
+    .hero-content2 h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content2 p {
+        font-size: 1rem;
+    }
+}
 

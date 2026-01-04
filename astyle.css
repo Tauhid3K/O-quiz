@@ -1,3 +1,96 @@
+/* -----------------------------
+   Main Theme (from style.css)
+   ----------------------------- */
+
+/* Body */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #3f51b5, #2196f3);
+    height: 100vh;
+    color: #333;
+}
+
+/* Navigation Panel */
+.nav {
+    display: flex;
+    background-color: #1b3953;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px;
+    height: 60px;
+    position: relative;
+}
+
+.logo {
+    display: flex;
+    color: aqua;
+    font-weight: bolder;
+    font-size: 2.4rem;
+    margin-right: 120px;
+}
+
+.nav_links a {
+    color: white;
+    margin-left: 40px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.nav_links a:hover {
+    color: #ffcc00;
+}
+
+/* Buttons */
+.hero-buttons .btn {
+    padding: 10px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0 10px;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: yellow;
+    color: #1b3953;
+}
+
+.btn-primary:hover {
+    background-color: #e6b800;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #ffcc00;
+    border: 2px solid #ffcc00;
+}
+
+.btn-secondary:hover {
+    background-color: yellow;
+    color: #1b3953;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #1b3953;
+    color: white;
+    padding: 15px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* -----------------------------
+   About Page Custom Styles
+   ----------------------------- */
+
+/* Hero Section */
 .hero {
     display: flex;
     flex-direction: column;
@@ -20,41 +113,40 @@
 
 /* Hero1 Section for Key Features */
 .hero1 {
-  color: white;
-  padding: 30px 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+    color: white;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .hero-content1 {
-  max-width: 700px;
+    max-width: 700px;
 }
 
 .hero-content1 h1 {
-  font-size: 2rem;
-  margin-bottom: 30px;
+    font-size: 2rem;
+    margin-bottom: 30px;
 }
 
 .hero-content1 ul {
-  list-style-type: disc;
-  text-align: left;
-  margin: 0 auto;    
-  padding-left: 30px; 
+    list-style-type: disc;
+    text-align: left;
+    margin: 0 auto;
+    padding-left: 30px;
 }
 
 .hero-content1 li {
-  margin-bottom: 12px;
-  font-size: 1.1rem;
+    margin-bottom: 12px;
+    font-size: 1.1rem;
 }
-
 
 /* Features Section */
 .features {
-    text-align: center;
-    padding: 30px 20px;
-    color: white;
+    text-align: center;          /* center all text inside section */
+    padding: 40px 20px;
+    color: white;                /* text color */
 }
 
 .features h2 {
@@ -62,25 +154,37 @@
     margin-bottom: 20px;
 }
 
+.feature-box {
+    display: flex;               /* use flex to center content */
+    justify-content: center;     /* horizontal centering */
+}
+
 .feature-box p {
-    margin: 10px auto;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     max-width: 700px;
+    line-height: 1.6;
+    text-align: center;          /* center text inside p */
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    background-color: #1b3953;
-    color: white;
-    padding: 15px 20px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+
+
+main {
+    flex: 1;
 }
 
-/* Responsive for Mobile */
-@media (max-width: 768px){
+/* -----------------------------
+   Responsive Styles
+   ----------------------------- */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav_links a {
+        margin: 10px 0;
+    }
+
     .hero-content h1 {
         font-size: 2rem;
     }
